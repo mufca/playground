@@ -15,14 +15,14 @@ import static io.github.mufca.libgdx.gui.core.CoreConstants.TRACER_SKIN;
 import static io.github.mufca.libgdx.gui.core.TextureConstants.ORC_FEMALE_PORTRAIT;
 
 public class Paragraph extends CoreTable {
-    private final Label typingLabel;
-    private final Image image;
+    public final TypingLabel typingLabel;
+    public final Image image;
 
     public Paragraph(ParagraphParameters paragraphParameters) {
         super();
         String processedText = TextProcessor.processText(paragraphParameters.text());
-        typingLabel = new Label(processedText, TRACER_SKIN);
-        typingLabel.setText(processedText);
+        typingLabel = new TypingLabel(processedText, TRACER_SKIN);
+//        typingLabel.setText(processedText);
         image = new Image(ORC_FEMALE_PORTRAIT);
         this.add(image);
         this.add(typingLabel).expandX();
