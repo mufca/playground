@@ -12,7 +12,7 @@ import java.util.Optional;
 public class Main extends Game {
     @Override
     public void create() {
-        changeToBorderless();
+//        changeToBorderless();
         setScreen(new Screen());
     }
 
